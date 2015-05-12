@@ -6,9 +6,16 @@
 var Bob = function() {};
 
 Bob.prototype.hey = function(input) {
-//
-// YOUR CODE GOES HERE
-//
+	if (input.match(/^\s*$/)) {
+		return 'Fine. Be that way!';
+	}
+	if ((input.match(/^.*[A-Za-z].*$/)) && (input == input.toUpperCase())) {
+		return 'Whoa, chill out!';	
+	}
+	if (input.charAt(input.length-1) == '?'){
+		return 'Sure.'
+	}
+	return "Whatever.";
 };
 
 module.exports = Bob;
