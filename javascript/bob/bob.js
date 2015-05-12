@@ -6,10 +6,10 @@
 var Bob = function() {};
 
 Bob.prototype.hey = function(input) {
-	if (input.match(/^\s*$/)) {
+	if (input.trim().length == 0) {
 		return 'Fine. Be that way!';
 	}
-	if ((input.match(/^.*[A-Za-z].*$/)) && (input == input.toUpperCase())) {
+	if ((input.match(/^.*[A-z].*$/)) && (input == input.toUpperCase())) {
 		return 'Whoa, chill out!';	
 	}
 	if (input.charAt(input.length-1) == '?'){
